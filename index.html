@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Learning Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Welcome Section -->
+    <div class="welcome-section" id="welcome-section">
+      <h1>Advanced Learning Platform</h1>
+      <p>Your AI-powered PDF notes summarizer.</p>
+      <button id="start-btn">Upload Notes</button>
+    </div>
+
+    <!-- Upload Section -->
+    <div class="upload-section" id="upload-section" style="display: none;">
+      <input type="file" id="pdf-upload" accept="application/pdf" />
+      <button id="summarize-btn">
+        <span>Summarize</span>
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/summary-list.png" alt="summarize-icon"/>
+      </button>
+    </div>
+    
+    <!-- Loading Indicator -->
+    <div id="loading-indicator" class="loading-indicator" style="display: none;">
+      <p>Processing your file...</p>
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Summary Output Section -->
+    <div id="summary-section" class="summary-box" style="display: none;">
+      <p id="summary-text">Your summary will appear here...</p>
+      <div class="summary-info">
+        <span id="char-count"></span>
+        <button id="copy-summary-btn">Copy Summary</button>
+        <button id="reset-btn">End Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
